@@ -9,18 +9,8 @@ export default function Navbar({ title, aboutText, mode, toggleMode }) {
 			} bg-${mode === "dark" ? mode : "light"}`}>
 			<div className="container-fluid">
 				<div className="navbar-brand">{title}</div>
-				<button
-					className="navbar-toggler"
-					type="button"
-					data-bs-toggle="collapse"
-					data-bs-target="#navbarSupportedContent"
-					aria-controls="navbarSupportedContent"
-					aria-expanded="false"
-					aria-label="Toggle navigation">
-					<span className="navbar-toggler-icon"></span>
-				</button>
 				<div
-					className="collapse navbar-collapse d-flex flex-wrap justify-content-between"
+					className=" d-flex flex-wrap justify-content-between"
 					id="navbarSupportedContent">
 					<div className="navbar-nav"></div>
 					<div className="form-check form-switch ms-3">

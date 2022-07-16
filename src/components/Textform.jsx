@@ -68,25 +68,35 @@ export default function Textform({ title, mode, alert }) {
 						}
 						onChange={onChangeTextArea}></textarea>
 				</div>
-				<div className="mb-3">
-					<button className="btn btn-primary" onClick={convertToUpperCase}>
+				<div className="mb-3 d-flex flex-wrap justify-content-between row ">
+					<button
+						className="btn btn-primary  col-11 col-sm-11 col-md-4 col-lg-3 col-xl-2 m-2"
+						onClick={convertToUpperCase}>
 						Convert To Uppercase
 					</button>
-					<button className="btn btn-primary ms-3" onClick={convertToLowerCase}>
+					<button
+						className="btn btn-primary  col-11 col-sm-11 col-md-4 col-lg-3 col-xl-2 m-2"
+						onClick={convertToLowerCase}>
 						Convert To LowerCase
 					</button>
-					<button className="btn btn-primary ms-3" onClick={showOrigionalText}>
+					<button
+						className="btn btn-primary  col-11 col-sm-11 col-md-4 col-lg-3 col-xl-2 m-2"
+						onClick={showOrigionalText}>
 						Origional Text
 					</button>
-					<button className="btn btn-primary ms-3" onClick={clearText}>
+					<button
+						className="btn btn-primary  col-11 col-sm-11 col-md-4 col-lg-3 col-xl-2 m-2"
+						onClick={clearText}>
 						Clear Text
 					</button>
 					<button
-						className="btn btn-primary ms-3"
+						className="btn btn-primary  col-11 col-sm-11 col-md-4 col-lg-3 col-xl-2 m-2"
 						onClick={() => downloadText("Myfile.txt", text)}>
 						Download Text
 					</button>
-					<button className="btn btn-primary ms-3" onClick={copyText}>
+					<button
+						className="btn btn-primary col-11 col-sm-11 col-md-4 col-lg-3 col-xl-2 m-2"
+						onClick={copyText}>
 						Copy
 					</button>
 				</div>
