@@ -1,0 +1,11 @@
+{
+	"prettier.trailingComma": "es5",
+	"prettier.tabWidth": 2,
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"editor.formatOnSave": true,
+	"prettier.useTabs": true,
+	"prettier.htmlWhitespaceSensitivity": "strict",
+	"prettier.resolveGlobalModules": false,
+	"prettier.requirePragma": false,
+	"prettier.semi": false
+}
