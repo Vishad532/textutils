@@ -46,10 +46,7 @@ export default function Textform({ title, mode, alert }) {
 		}
 	}
 	const copyText = () => {
-		var copyText = document.getElementById("myInput")
-		copyText.select()
-		navigator.clipboard.writeText(copyText.value)
-		document.getSelection().removeAllRanges()
+		navigator.clipboard.writeText(text)
 		alert("Copy to Clipboard.", "success")
 	}
 	return (
@@ -114,7 +111,7 @@ export default function Textform({ title, mode, alert }) {
 					<span>
 						Total words in text :{" "}
 						{
-							text.split(" ").filter((word) => {
+							text.split(/\s|\n/).filter((word) => {
 								return word != ""
 							}).length
 						}{" "}
@@ -125,7 +122,7 @@ export default function Textform({ title, mode, alert }) {
 					<span>
 						Time to read :{" "}
 						{0.008 *
-							text.split(" ").filter((word) => {
+							text.split(/\s|\n/).filter((word) => {
 								return word != ""
 							}).length}{" "}
 						Minutes
