@@ -49,6 +49,7 @@ export default function Textform({ title, mode, alert }) {
 		var copyText = document.getElementById("myInput")
 		copyText.select()
 		navigator.clipboard.writeText(copyText.value)
+		document.getSelection().removeAllRanges()
 		alert("Copy to Clipboard.", "success")
 	}
 	return (
@@ -68,35 +69,41 @@ export default function Textform({ title, mode, alert }) {
 						}
 						onChange={onChangeTextArea}></textarea>
 				</div>
-				<div className="mb-3 d-flex flex-wrap justify-content-between row ">
+				<div className="mb-3 d-flex flex-wrap ">
 					<button
-						className="btn btn-primary  col-11 col-sm-11 col-md-4 col-lg-3 col-xl-2 m-2"
-						onClick={convertToUpperCase}>
+						className="btn btn-primary mx-1 my-1"
+						onClick={convertToUpperCase}
+						disabled={text.trim().length === 0}>
 						Convert To Uppercase
 					</button>
 					<button
-						className="btn btn-primary  col-11 col-sm-11 col-md-4 col-lg-3 col-xl-2 m-2"
-						onClick={convertToLowerCase}>
+						className="btn btn-primary mx-1 my-1"
+						onClick={convertToLowerCase}
+						disabled={text.trim().length === 0}>
 						Convert To LowerCase
 					</button>
 					<button
-						className="btn btn-primary  col-11 col-sm-11 col-md-4 col-lg-3 col-xl-2 m-2"
-						onClick={showOrigionalText}>
+						className="btn btn-primary mx-1 my-1"
+						onClick={showOrigionalText}
+						disabled={text.trim().length === 0}>
 						Origional Text
 					</button>
 					<button
-						className="btn btn-primary  col-11 col-sm-11 col-md-4 col-lg-3 col-xl-2 m-2"
-						onClick={clearText}>
+						className="btn btn-primary mx-1 my-1"
+						onClick={clearText}
+						disabled={text.trim().length === 0}>
 						Clear Text
 					</button>
 					<button
-						className="btn btn-primary  col-11 col-sm-11 col-md-4 col-lg-3 col-xl-2 m-2"
-						onClick={() => downloadText("Myfile.txt", text)}>
+						className="btn btn-primary mx-1 my-1"
+						onClick={() => downloadText("Myfile.txt", text)}
+						disabled={text.trim().length === 0}>
 						Download Text
 					</button>
 					<button
-						className="btn btn-primary col-11 col-sm-11 col-md-4 col-lg-3 col-xl-2 m-2"
-						onClick={copyText}>
+						className="btn btn-primary mx-1 my-1"
+						onClick={copyText}
+						disabled={text.trim().length === 0}>
 						Copy
 					</button>
 				</div>
